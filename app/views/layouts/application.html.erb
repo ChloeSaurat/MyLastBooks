@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyLastBooks</title>
+    <!-- Google results-->
+    <title>My Last Books - Remember what you read</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="With My Last Books, you can organise what you have read in lists and share it!"/>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- Facebook results-->
+    <meta property="og:title" content="My Last Books - Remember what you read">
+    <meta property="og:image" content="facebook-card.jpg">
+    <meta property="og:description" content="With My Last Books, you can organise what you have read in lists and share it!">
+    <meta property="og:site_name" content="My Last Books"/>
+
+    <!-- Twitter results-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="#">
+    <meta name="twitter:title" content="My Last Books - Remember what you read">
+    <meta name="twitter:description" content="With My Last Books, you can organise what you have read in lists and share it!">
+    <meta name="twitter:creator" content="#">
+    <meta name="twitter:image:src" content="http://twitter-card.jpg">
+
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
