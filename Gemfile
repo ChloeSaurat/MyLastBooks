@@ -57,5 +57,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
+
+# Devise
 gem 'devise'
+
+# PostGreSql Database
 gem 'pg'
+
+# Ajout de Webpack apres le demarrage
+gem 'webpacker'
