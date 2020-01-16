@@ -66,3 +66,4 @@ gem 'pg'
 
 # Ajout de Webpack apres le demarrage
 gem 'webpacker'
+gem 'bootstrap', '~> 4.0.0'
