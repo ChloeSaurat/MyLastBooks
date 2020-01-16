@@ -1,6 +1,6 @@
-class Book < ApplicationRecord
+class List < ApplicationRecord
   belongs_to :user
-  has_many :lists
+  has_many :books
 
   validates :name, presence: true
 end
