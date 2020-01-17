@@ -1,3 +1,19 @@
-<div>
-  <h1> Coucou </h1>
+<div class="book-container">
+  <div class="content-pic">
+    <%= cl_image_tag @book.picture, height: 300, width: 400, crop: :fill%>
+  </div>
+  <div class="content-info-book">
+    <div class="content-name-book">
+      <%= @book.name %>
+      <%= @book.author %>
+    </div>
+    <div class="content-info-book">
+      <li><%= @book.description %></li>
+      <li><%= @book.type %></li>
+      <li><%= @book.price %></li>
+      <li><%= @book.nb_pages %></li>
+      <li><%= @book.rate %></li>
+    </div>
+  </div>
+  <%= link_to "Delete this book" %>
 </div>
