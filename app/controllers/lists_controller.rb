@@ -2,11 +2,15 @@ class ListsController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:query].present?
-      @lists = current_user.lists.search_by_name(params[:query])
-    else
-      @lists = current_user.lists
-    end
+    # acces a toutes les listes, même autre utilisateur
+    @lists = List.all
+
+    # pour faire une recherche d'une liste en particulier
+    # if params[:query].present?
+    #   @lists = current_user.lists.search_by_name(params[:query])
+    # else
+    #   @lists = current_user.lists
+    # end
   end
 
   def show
