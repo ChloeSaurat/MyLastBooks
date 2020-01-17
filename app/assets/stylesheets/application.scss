@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "pages/home";
+@import "config/bootstrap_variables";
+@import "config/colors";
+@import "config/fonts";
+@import "components/footer";
+@import "components/navbar";
+@import "components/card_list";
