@@ -22,7 +22,5 @@
 
 // Appel de l'animation lors du hover sur le bouton btn-jumpy
 .btn-jumpy:hover {
-  display: inline-block;
-  background: red;
   animation: btn-jumpy-hover 420ms ease;
 }
