@@ -1,0 +1,9 @@
+.book-container {
+ display: grid;
+ grid-column-gap: 50px;
+ grid-template-columns: 40% 60%;
+}
+
+.content-info-book {
+  padding: 16px;
+}
