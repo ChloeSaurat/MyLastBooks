@@ -1,8 +1,8 @@
-@textColor: #444444;
+$textColor: #444444;
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color:@textColor;
+  color: $textColor;
   font-size:1em;
   box-sizing:border-box;
 }
