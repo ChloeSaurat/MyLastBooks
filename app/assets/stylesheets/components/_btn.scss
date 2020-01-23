@@ -1,0 +1,26 @@
+// Animation bouton shaky
+@keyframes btn-jumpy-hover {
+  0%,100%,50% {
+      -webkit-transform: skewY(0);
+      transform: skewY(0)
+  }
+
+  40% {
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      -webkit-transform: skewY(3deg);
+      transform: skewY(3deg)
+  }
+
+  60% {
+      -webkit-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+      -webkit-transform: skewY(-3deg);
+      transform: skewY(-3deg)
+  }
+}
+
+// Appel de l'animation lors du hover sur le bouton btn-jumpy
+.btn-jumpy:hover {
+  animation: btn-jumpy-hover 420ms ease;
+}

@@ -1,10 +1,10 @@
-@textColor: #444444;
+$textColor: #444444;
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color:@textColor;
-  font-size:1em;
-  box-sizing:border-box;
+  color: $textColor;
+  font-size: 1em;
+  box-sizing: border-box;
 }
 
 hr {
@@ -15,17 +15,17 @@ hr {
 }
 
 .wrapper {
-  width:94%;
-  margin:auto;
+  width: 94%;
+  margin: auto;
 }
 
 .box {
-  max-width:320px;
+  max-width: 320px;
   min-height:320px;
-  margin:60px auto;
-  border:1px solid #ccc;
-  padding:10px;
-  box-shadow:0 1px 1px 1px #ccc;
+  margin: 60px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 1px 1px 1px #ccc;
   transition: 3s ease-in all;
   &:hover {
      transform: rotate(30deg);
@@ -33,30 +33,30 @@ hr {
   h2 {
     text-align:center;
     background-color:red;
-    color:black;
-    padding:20px;
-    margin:0;
-    border:2px solid black;
+    color: black;
+    padding: 20px;
+    margin: 0;
+    border: 2px solid black;
     small {
       text-transform:uppercase;
-      font-size:12px;
-      letter-spacing:2px;
+      font-size: 12px;
+      letter-spacing: 2px;
     }
   }
   .align-center {
-    text-align:center;
+    text-align: center;
   }
 }
 
 .float-left {
-  float:left;
+  float: left;
 }
 
 .float-right {
-  float:right;
+  float: right;
 }
 
 .clear-both {
-  clear:both;
-  padding-bottom:10px;
+  clear: both;
+  padding-bottom: 10px;
 }
