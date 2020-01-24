@@ -1,0 +1,14 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Lato|Karla:400&display=swap');
+
+// Define fonts for body and headers
+$headers-font: 'Karla', sans-serif;
+$body-font: 'Lato', sans-serif;
+
+h1, h2, h3, h4, h5 {
+  font-family: $headers-font;
+}
+
+p, span {
+  font-family: $body-font;
+}
