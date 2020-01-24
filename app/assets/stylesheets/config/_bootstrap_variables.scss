@@ -4,32 +4,32 @@
 // 3. You can override them below!
 
 // General style
-// $font-family-sans-serif:  $body-font;
-// $headings-font-family:    $headers-font;
-// $body-bg:                 $mlb-whitegray;
-// $font-size-base: 1rem;
+$font-family-sans-serif:  $body-font;
+$headings-font-family:    $headers-font;
+$body-bg:                 $mlb-whitegray;
+$font-size-base: 1rem;
 
 // Colors
-// $body-color: $gray;
-//  $primary:    $mlb-taupe;
-// $secondary:  $mlb-orange;
-// $success:    $green;
-// $info:       $yellow;
-// $danger:     $red;
-// $warning:    $orange;
+$body-color: $gray;
+$primary:    $mlb-taupe;
+$secondary:  $mlb-orange;
+$success:    $green;
+$info:       $yellow;
+$danger:     $red;
+$warning:    $orange;
 
 // Buttons & inputs' radius
-// $border-radius:    2px;
-// $border-radius-lg: 2px;
-// $border-radius-sm: 2px;
+$border-radius:    6px;
+$border-radius-lg: 6px;
+$border-radius-sm: 6px;
 
 // Override other variables below!
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1440px
-// );
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1440px
+);
 
-// $navbar-height: 65px;
-// $footer-height: 60px;
+$navbar-height: 65px;
+$footer-height: 60px;
