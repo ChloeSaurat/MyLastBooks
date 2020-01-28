@@ -8,13 +8,7 @@ Rails.application.routes.draw do
 
   resources :lists
 
-
-
-
-
 end
-
-
 
 # resources :skivents do
     # resources :bookings, only: [:create]
