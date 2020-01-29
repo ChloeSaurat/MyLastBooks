@@ -14,10 +14,10 @@ puts "Creating the users"
 
 u1 = User.create!(name: "Chloé", email: "sauratchloe@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1579306914/clgsp3gwk0ishlyghyj7.png")
 u2 = User.create!(name: "Amandine", email: "caramandine@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1579306933/q254pclrrdybuiijoka7.jpg")
-u3 = User.create!(name: "Charlotte", email: "charlotte@gmail.com", password: "test123", avatar: "")
-u4 = User.create!(name: "", email: "@gmail.com", password: "test123", avatar: "")
-u5 = User.create!(name: "", email: "@gmail.com", password: "test123", avatar: "")
-u6 = User.create!(name: "", email: "@gmail.com", password: "test123", avatar: "")
+u3 = User.create!(name: "Camille", email: "camille@gmail.com", password: "test123", avatar: "")
+u4 = User.create!(name: "Martin", email: "martin@gmail.com", password: "test123", avatar: "")
+u5 = User.create!(name: "Alex", email: "alex@gmail.com", password: "test123", avatar: "")
+u6 = User.create!(name: "Aline", email: "aline@gmail.com", password: "test123", avatar: "")
 
 puts "Creating the users"
 
