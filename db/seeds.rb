@@ -14,10 +14,10 @@ puts "Creating the users"
 
 u1 = User.create!(name: "Chloé", email: "sauratchloe@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1579306914/clgsp3gwk0ishlyghyj7.png")
 u2 = User.create!(name: "Amandine", email: "caramandine@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1579306933/q254pclrrdybuiijoka7.jpg")
-u3 = User.create!(name: "Camille", email: "camille@gmail.com", password: "test123", avatar: "")
-u4 = User.create!(name: "Martin", email: "martin@gmail.com", password: "test123", avatar: "")
-u5 = User.create!(name: "Alex", email: "alex@gmail.com", password: "test123", avatar: "")
-u6 = User.create!(name: "Aline", email: "aline@gmail.com", password: "test123", avatar: "")
+u3 = User.create!(name: "Camille", email: "camille@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1575657166/plrotwqfbxaiu2vtwg4q.png")
+u4 = User.create!(name: "Martin", email: "martin@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580309962/ztf3n7q4nvrsca1b3chl.jpg")
+u5 = User.create!(name: "Alex", email: "chaton@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580309948/wxnyw7xbdm6gagshjrz7.jpg")
+u6 = User.create!(name: "Aline", email: "aline@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580310000/obkoezejoim0wz5tihvn.webp")
 
 puts "Creating the users"
 
@@ -104,47 +104,49 @@ b6 = Book.create!(
 )
 
 b7 = Book.create!(
-  name: "",
-  author: "",
-  nb_pages: ,
-  price: ,
-  type: "",
-  rate: ,
-  description: "",
-  picture: ""
+  name: "Le crime de l'Orient Express",
+  author: "Agatha Christie",
+  nb_pages: 190,
+  price: 10,
+  type: "Roman policier",
+  rate: 18,
+  description: "Un wagon de l'Orient-Express bloqué par les neiges et, dans un compartiment, un Américain lardé de douze coups de couteau. Hercule Poirot mène l'enquête.",
+  picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352467/b4yuxvigtnyfa47351y7.jpg"
 )
 
 b8 = Book.create!(
-  name: "",
-  author: "",
-  nb_pages: ,
-  price: ,
-  type: "",
-  rate: ,
-  description: "",
-  picture: ""
+  name: "Tintin au Tibet",
+  author: "Hergé",
+  nb_pages: 60,
+  price: 13,
+  type: "Bande dessinée",
+  rate: 17,
+  description: "Un avion de ligne s'est écrasé dans l'Himalaya et Tchang, l'ami que Tintin a connu en Chine, fait partie des disparus. Persuadé qu'il est toujours en vie, Tintin part avec le capitaine Haddock pour le Népal.",
+  picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352455/tjcfhbx44s0orbg5hlkl.jpg"
 )
 
 b9 = Book.create!(
-  name: "",
-  author: "",
-  nb_pages: ,
-  price: ,
-  type: "",
-  rate: ,
-  description: "",
-  picture: ""
+  name: "Une brève histoire du temps",
+  author: "Stephen Hawking",
+  nb_pages: 185,
+  price: 11,
+  type: "Astrophysique",
+  rate: 17,
+  description: "Voici le premier livre que Stephen Hawking ait écrit pour le grand public.
+  Il y expose, dans un langage accessible à tous, les plus récentes découvertes des astrophysiciens.
+  Retraçant les grandes théories du cosmos depuis Galilée jusqu'à Einstein, racontant les ultimes découvertes en cosmologie, expliquant la nature des trous noirs, il propose ensuite de relever le plus grand défi de la science moderne : la recherche d'une théorie permettant de concilier la relativité générale et la mécanique quantique.",
+  picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352487/e4jhwgn568xhefbc8jub.jpg"
 )
 
 b10 = Book.create!(
-  name: "",
-  author: "",
-  nb_pages: ,
-  price: ,
-  type: "",
-  rate: ,
-  description: "",
-  picture: ""
+  name: "Tricoter ses chaussettes : les techniques pour débuter",
+  author: "Wendy D Johnson",
+  nb_pages: 45,
+  price: 37,
+  type: "apprentissage",
+  rate: 15,
+  description: "Diverses techniques pour tricoter des chaussettes, de la formation de la pointe ou du renfort de talon, de l'adaptation à la taille de chacun jusqu'à l'arrêt des mailles. Avec 23 modèles pour varier les points et la complexité de la finition.",
+  picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352478/noldto9lrl9qvuj532kp.jpg"
 )
 
 
@@ -187,26 +189,25 @@ l6 = List.create!(
 )
 
 l7 = List.create!(
-  name: "",
-  user_id: ,
-  books:
+  name: "Favorites",
+  user_id: u4,
+  books: b9
 )
 
 l8 = List.create!(
-  name: "",
-  user_id: ,
-  books:
+  name: "Challenging",
+  user_id: u5,
+  books: b8
 )
 
 l9 = List.create!(
-  name: "",
-  user_id: ,
-  books:
+  name: "Children lectures",
+  user_id: u1,
+  books: b8
 )
 
 l10 = List.create!(
-  name: "",
-  user_id: ,
-  books:
+  name: "DIY",
+  user_id: u2,
+  books: b10
 )
-
