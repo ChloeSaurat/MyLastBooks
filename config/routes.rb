@@ -4,17 +4,23 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [:show]
 
-  resources :books, only: [:create]
+  resources :books, only: [:create] do
+    # pour la route books/new
+    collection do
+      get :add, to: 'books#add'
+      # on peut changer le 'add' par new, on personnalise l'url en fait
+    end
+  end
 
-  resources :lists
-
-
-
-
-
+  resources :lists do
+    resources :books, only: [:show, :create]
+    # pour la route lists/id/add afin d'ajouter un livre à la liste
+    member do
+      get :add, to: 'lists#add_book'
+      # nom de l'url puis nom de la methode dans le controller
+    end
+  end
 end
-
-
 
 # resources :skivents do
     # resources :bookings, only: [:create]
