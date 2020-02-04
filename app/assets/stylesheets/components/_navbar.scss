@@ -19,4 +19,11 @@
     color: $mlb-orange;
     font-family: $body-font;
   }
+
+  .avatar {
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }

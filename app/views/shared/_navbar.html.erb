@@ -13,11 +13,11 @@
         <!-- <li class="nav-item active">
           <%= link_to "Home", "#", class: "nav-link" %>
         </li> -->
-        <% pending_bookings = current_user.pending_bookings.count %>
-        <% badge_class = pending_bookings.zero? ? "" : "badge-count" %>
-        <li class="nav-item dropdown <%= badge_class %>" data-count="<%= pending_bookings %>">
+        <%# pending_bookings = current_user.pending_bookings.count %>
+        <%# badge_class = pending_bookings.zero? ? "" : "badge-count" %>
+        <li class="nav-item dropdown <%# badge_class %>" data-count="<%# pending_bookings %>">
           <img
-            src="<%= current_user.picture ? current_user.picture : 'test' %>"
+            src="<%= current_user.avatar ? current_user.avatar : '' %>"
             alt="picture of me"
             class="avatar dropdown-toggle"
             id="navbarDropdown"
@@ -26,11 +26,11 @@
             aria-expanded= "false">
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item #{badge_class}", "data-count" => pending_bookings %>
+            <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Messages", "#", class: "dropdown-item" %>
-            <%= link_to "My Lists", favorites_path, class: "dropdown-item" %>
+            <%= link_to "My Lists", lists_path, class: "dropdown-item" %>
             <%= link_to "Add a List", new_list_path, class: "dropdown-item" %>
-            <%= link_to "Add a Book", new_book_path, class: "dropdown-item" %>
+            <%= link_to "Add a Book", add_books_path, class: "dropdown-item" %>
             <%= link_to "Public Library", books_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
