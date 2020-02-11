@@ -9,6 +9,7 @@
 Book.destroy_all
 List.destroy_all
 User.destroy_all
+List.destroy_all
 
 puts "Creating the users"
 
@@ -19,7 +20,7 @@ u4 = User.create!(name: "Martin", email: "martin@gmail.com", password: "test123"
 u5 = User.create!(name: "Alex", email: "chaton@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580309948/wxnyw7xbdm6gagshjrz7.jpg")
 u6 = User.create!(name: "Aline", email: "aline@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580310000/obkoezejoim0wz5tihvn.webp")
 
-puts "Creating the users"
+puts "Creating the books"
 
 b1 = Book.create!(
   name: "La Tresse",
@@ -173,7 +174,6 @@ l3 = List.create!(
 l4 = List.create!(
   name: "Cooking",
   user: u2,
-  books: [b3]
 )
 
 l5 = List.create!(
@@ -197,7 +197,6 @@ l7 = List.create!(
 l8 = List.create!(
   name: "Challenging",
   user: u5,
-  books: [b8]
 )
 
 l9 = List.create!(
@@ -209,5 +208,4 @@ l9 = List.create!(
 l10 = List.create!(
   name: "DIY",
   user: u2,
-  books: [b10]
 )
