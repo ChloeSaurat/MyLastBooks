@@ -174,6 +174,7 @@ l3 = List.create!(
 l4 = List.create!(
   name: "Cooking",
   user: u2,
+  books: [b3]
 )
 
 l5 = List.create!(
@@ -197,6 +198,7 @@ l7 = List.create!(
 l8 = List.create!(
   name: "Challenging",
   user: u5,
+  books: [b8]
 )
 
 l9 = List.create!(
@@ -208,4 +210,5 @@ l9 = List.create!(
 l10 = List.create!(
   name: "DIY",
   user: u2,
+  books: [b10]
 )
