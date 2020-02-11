@@ -1,0 +1,30 @@
+.navbar {
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  z-index: 3000;
+  background-color: transparent;
+  padding-bottom: 50px;
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  h3 {
+    color: $mlb-orange;
+    font-family: $body-font;
+  }
+
+  .avatar {
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

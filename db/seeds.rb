@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Book.destroy_all
+List.destroy_all
 User.destroy_all
 List.destroy_all
 
@@ -19,14 +20,14 @@ u4 = User.create!(name: "Martin", email: "martin@gmail.com", password: "test123"
 u5 = User.create!(name: "Alex", email: "chaton@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580309948/wxnyw7xbdm6gagshjrz7.jpg")
 u6 = User.create!(name: "Aline", email: "aline@gmail.com", password: "test123", avatar: "https://res.cloudinary.com/mandarine8/image/upload/v1580310000/obkoezejoim0wz5tihvn.webp")
 
-puts "Creating the users"
+puts "Creating the books"
 
 b1 = Book.create!(
   name: "La Tresse",
   author: "Laetitia Colombani",
   nb_pages: 240,
   price: 13,
-  type: "Roman",
+  category: "Roman",
   rate: 18,
   description: "Trois femmes, trois vies, trois continents. Une même soif de liberté.
   Inde. Smita est une Intouchable. Elle rêve de voir sa fille échapper à sa condition misérable et entrer à l’école.
@@ -41,7 +42,7 @@ b2 = Book.create!(
   author: "J.K. Rowling",
   nb_pages: 311,
   price: 16,
-  type: "Fiction",
+  category: "Fiction",
   rate: 19,
   description: "Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit son existence bouleversée.
   Un géant vient le chercher pour l'emmener à Poudlard, une école de sorcellerie ! Voler en balai, jeter des sorts, combattre les trolls : Harry se révèle un sorcier doué.
@@ -54,7 +55,7 @@ b3 = Book.create!(
   author: "Geneviève O'gleman",
   nb_pages: 256,
   price: 30,
-  type: "Kitchen",
+  category: "Kitchen",
   rate: 16,
   description: "Plus qu'un simple livre de recettes, voici l'indispensable plan de match pour vous permettre de renouveler vos lunchs au quotidien.
   Une méthode facile et efficace pour apprendre à mieux prévoir et organiser courses et préparation.
@@ -69,7 +70,7 @@ b4 = Book.create!(
   author: "Margaret Atwood",
   nb_pages: 521,
   price: 18,
-  type: "Dystopique",
+  category: "Dystopique",
   rate: 17,
   description: "Alors que la natalité ne cesse de baisser, Defred doit mettre au service de la république de Giléad, récemment fondée par des fanatiques religieux, son attribut le plus précieux : sa matrice.
   A travers le portrait de cette femme, l'auteure dresse un réquisitoire sans appel contre tous les intégrismes.
@@ -82,7 +83,7 @@ b5 = Book.create!(
   author: "Andrew Hunt",
   nb_pages: 352,
   price: 25,
-  type: "Programming",
+  category: "Programming",
   rate: 18,
   description: "Written as a series of self-contained sections and filled with entertaining anecdotes, thoughtful examples, and interesting analogies, The Pragmatic Programmer illustrates the best practices and major pitfalls of many different aspects of software development.
   Whether you're a new coder, an experienced programmer, or a manager responsible for software projects, use these lessons daily, and you'll quickly see improvements in personal productivity, accuracy, and job satisfaction.
@@ -95,7 +96,7 @@ b6 = Book.create!(
   author: "Jeremy Demay",
   nb_pages: 216,
   price: 25,
-  type: "Developpement personnel",
+  category: "Developpement personnel",
   rate: 15,
   description: "En 2009, rien n'allait.
   Je me levais le matin et je n'avais qu'un désir: celui de me rendormir pour oublier ma vie. Cet ouvrage regroupe tous les outils qui m'ont aidé à accéder à une vie fabuleuse, à vivre mes rêves et à me sentir épanoui.
@@ -108,7 +109,7 @@ b7 = Book.create!(
   author: "Agatha Christie",
   nb_pages: 190,
   price: 10,
-  type: "Roman policier",
+  category: "Roman policier",
   rate: 18,
   description: "Un wagon de l'Orient-Express bloqué par les neiges et, dans un compartiment, un Américain lardé de douze coups de couteau. Hercule Poirot mène l'enquête.",
   picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352467/b4yuxvigtnyfa47351y7.jpg"
@@ -119,7 +120,7 @@ b8 = Book.create!(
   author: "Hergé",
   nb_pages: 60,
   price: 13,
-  type: "Bande dessinée",
+  category: "Bande dessinée",
   rate: 17,
   description: "Un avion de ligne s'est écrasé dans l'Himalaya et Tchang, l'ami que Tintin a connu en Chine, fait partie des disparus. Persuadé qu'il est toujours en vie, Tintin part avec le capitaine Haddock pour le Népal.",
   picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352455/tjcfhbx44s0orbg5hlkl.jpg"
@@ -130,7 +131,7 @@ b9 = Book.create!(
   author: "Stephen Hawking",
   nb_pages: 185,
   price: 11,
-  type: "Astrophysique",
+  category: "Astrophysique",
   rate: 17,
   description: "Voici le premier livre que Stephen Hawking ait écrit pour le grand public.
   Il y expose, dans un langage accessible à tous, les plus récentes découvertes des astrophysiciens.
@@ -143,7 +144,7 @@ b10 = Book.create!(
   author: "Wendy D Johnson",
   nb_pages: 45,
   price: 37,
-  type: "apprentissage",
+  category: "apprentissage",
   rate: 15,
   description: "Diverses techniques pour tricoter des chaussettes, de la formation de la pointe ou du renfort de talon, de l'adaptation à la taille de chacun jusqu'à l'arrêt des mailles. Avec 23 modèles pour varier les points et la complexité de la finition.",
   picture: "https://res.cloudinary.com/mandarine8/image/upload/v1580352478/noldto9lrl9qvuj532kp.jpg"
@@ -154,60 +155,57 @@ puts "Creating the lists"
 
 l1 = List.create!(
   name: "Favorites",
-  user_id: u1,
-  books: b1
+  user: u1,
+  books: [b1]
 )
 
 l2 = List.create!(
   name: "Favorites",
-  user_id: u2,
-  books: b2
+  user: u2,
+  books: [b2]
 )
 
 l3 = List.create!(
   name: "Children lectures",
-  user_id: u1,
-  books: b2
+  user: u1,
+  books: [b2]
 )
 
 l4 = List.create!(
   name: "Cooking",
-  user_id: u2,
-  books: b3
+  user: u2,
 )
 
 l5 = List.create!(
   name: "A lire",
-  user_id: u2,
-  books: b4
+  user: u2,
+  books: [b4]
 )
 
 l6 = List.create!(
   name: "A lire",
-  user_id: u2,
-  books: b5
+  user: u2,
+  books: [b5]
 )
 
 l7 = List.create!(
   name: "Favorites",
-  user_id: u4,
-  books: b9
+  user: u4,
+  books: [b9]
 )
 
 l8 = List.create!(
   name: "Challenging",
-  user_id: u5,
-  books: b8
+  user: u5,
 )
 
 l9 = List.create!(
   name: "Children lectures",
-  user_id: u1,
-  books: b8
+  user: u1,
+  books: [b8]
 )
 
 l10 = List.create!(
   name: "DIY",
-  user_id: u2,
-  books: b10
+  user: u2,
 )
