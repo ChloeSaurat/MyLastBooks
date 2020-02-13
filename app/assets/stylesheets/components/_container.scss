@@ -1,0 +1,12 @@
+// pour etirer le fond de la page (image par exemple)
+.fullscreen-container {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  margin-top: -80px;
+}
+
+// pour centrer correctement le contenu de la page en laissant la navbar
+.navbar-container {
+  padding-top: 80px;
+}
