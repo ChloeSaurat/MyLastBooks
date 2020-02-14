@@ -20,6 +20,8 @@
 
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+
     <!-- Facebook results-->
     <meta property="og:title" content="My Last Books - Remember what you read">
     <meta property="og:image" content="facebook-card.jpg">
@@ -39,9 +41,9 @@
   <body>
     <div class="navbar-container">
       <%= render 'shared/navbar' %>
-      <%# render 'shared/flashes' %>
+      <% render 'shared/flashes' %>
       <%= yield %>
-      <%# render "shared/footer" %>
+      <%= render 'shared/footer' %>
     </div>
 
     <%# javascript_include_tag 'application' %>
