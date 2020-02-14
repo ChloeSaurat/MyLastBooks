@@ -15,7 +15,6 @@
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_pack_tag 'application' %>
     <%= stylesheet_link_tag 'application' %>
 
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
@@ -46,6 +45,7 @@
       <%= render 'shared/footer' %>
     </div>
 
+    <%= javascript_pack_tag 'application' %>
     <%# javascript_include_tag 'application' %>
   </body>
 </html>
