@@ -4,7 +4,13 @@
 
     <h1>Remember what you read</h1>
 
-    <a href="#" class="btn btn-primary btn-jumpy">Enter</a>
+    <!-- <a href="#" class="btn btn-primary btn-jumpy">Add a book</a>
+    <a href="#" class="btn btn-primary btn-jumpy">Create a List</a>
+    <a href="#" class="btn btn-primary btn-jumpy">My Dashboard</a> -->
+
+    <%= link_to "Add a book", new_book_path , class: "btn btn-primary btn-jumpy" %>
+    <%= link_to "Create a List", new_list_path , class: "btn btn-primary btn-jumpy" %>
+    <%= link_to "My dashboard", user_path(current_user) , class: "btn btn-primary btn-jumpy" %>
 
   </div>
 
