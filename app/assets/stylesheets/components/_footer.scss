@@ -1,0 +1,38 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+  padding: 8px 25px;
+  background: transparent;
+  color: $mlb-darkgreen;
+  width: 100%;
+  //height: $footer-height;
+
+  a:hover{
+    color: $mlb-orange;
+    text-decoration: none;
+  }
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: $mlb-darkgreen;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer .fa-heart {
+  color: $mlb-orange;
+}
