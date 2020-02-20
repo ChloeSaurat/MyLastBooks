@@ -15,10 +15,11 @@
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_pack_tag 'application' %>
     <%= stylesheet_link_tag 'application' %>
 
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 
     <!-- Facebook results-->
     <meta property="og:title" content="My Last Books - Remember what you read">
@@ -40,10 +41,11 @@
     <div class="navbar-container">
       <%= render 'shared/navbar' %>
       <%= yield %>
-      <%# render "shared/footer" %>
+      <%= render 'shared/footer' %>
     </div>
       <%= render 'shared/flashes' %>
 
+    <%= javascript_pack_tag 'application' %>
     <%# javascript_include_tag 'application' %>
   </body>
 </html>
