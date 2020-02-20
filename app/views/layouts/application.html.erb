@@ -40,10 +40,10 @@
   <body>
     <div class="navbar-container">
       <%= render 'shared/navbar' %>
-      <% render 'shared/flashes' %>
       <%= yield %>
       <%= render 'shared/footer' %>
     </div>
+      <%= render 'shared/flashes' %>
 
     <%= javascript_pack_tag 'application' %>
     <%# javascript_include_tag 'application' %>
