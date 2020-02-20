@@ -1,0 +1,49 @@
+
+<div class="container">
+  <h1>Create a Book</h1>
+  <div class="form-center">
+  <%= simple_form_for(@book) do |f| %>
+    <%= f.input :name, label: "Title of your book", required: false, label_html: { class: 'label-book' } %>
+
+    <%= f.input :author %>
+    <%= f.input :category %>
+
+    <div class="form-row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="book-date" class="label-book">Choose a date of publication</label>
+          <input name="book[date]" type="date" class="form-control select" id="book-date" placeholder="choose a date">
+        </div>
+      </div>
+    </div>
+
+    <%= f.input :price %>
+    <%= f.input :nb_pages %>
+
+
+   <label class="label-book">Choose a photo</label>
+
+    <div class="input-group mb-3">
+      <div class="custom-file">
+        <%= f.input :picture, input_html: {class: "custom-file-input", id:"inputGroupFile02"}, label_html: {class: "custom-file-label", label: "choose a file"} %>
+
+      </div>
+      <div class="input-group-append">
+        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="book-description" class="label-book">Description</label>
+      <textarea name="book[description]" class="form-control" id="book-description" rows="3"></textarea>
+    </div>
+
+   <!--  Modifier ce bouton pour un menu deroulant avec les lists -->
+    <%= f.submit "Add this book to a List", class: "btn btn-primary" %>
+
+    <%= f.submit "Add this book to the Public Library", class: "btn btn-primary" %>
+
+  <% end %>
+  </div>
+</div>
