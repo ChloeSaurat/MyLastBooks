@@ -137,8 +137,10 @@ GEM
     pg (1.2.2-x86-mingw32)
     popper_js (1.16.0)
     public_suffix (4.0.3)
-    puma (3.12.4)
-    puma (3.12.4-java)
+    puma (4.3.9)
+      nio4r (~> 2.0)
+    puma (4.3.9-java)
+      nio4r (~> 2.0)
     rack (2.1.1)
     rack-proxy (0.6.5)
       rack
@@ -269,7 +271,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg
-  puma (~> 3.12)
+  puma (~> 4.3)
   rails (~> 5.2.4, >= 5.2.4.1)
   sass-rails (~> 5.0)
   selenium-webdriver
